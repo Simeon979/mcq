@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  font-family: "Anton", sans-serif;
+  background-color: #282a2d;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+main {
+  font-family: "Raleway", sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  max-width: 1024px;
+  padding: 2rem;
+  margin: 0 auto;
+  border: 1px solid lightgray;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.directive {
+  font-size: 1.2rem;
+}
+
+.metadata {
+  text-align: center;
+}
+
+.metadata p {
+  font-weight: bold;
+}
+
+.metadata button {
+  padding: 0.5rem 1rem;
+  background-color: midnightblue;
+  color: white;
+  border-radius: 5%;
+}

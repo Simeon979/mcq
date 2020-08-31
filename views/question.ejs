@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>MCQ</title>
+    <meta
+      name="description"
+      content="A multiple choice question quiz application"
+    />
+    <meta name="author" content="Simeon Adegbola" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Simeon Adegbola" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/static/styles/question.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>MCQ</header>
+    <main id="main">
+      <section class="metadata">
+        <div id="time"></div>
+        <div id="current-question" class="info"></div>
+        <div><button onclick="submit()">Submit</button></div>
+      </section>
+
+      <section id="fsstory" class="info"></section>
+      <section id="quiz">
+        <section>
+          <p id="question-text" class="info"></p>
+          <ul class="options">
+            <li id="option-1" onclick="choose(0)"></li>
+            <li id="option-2" onclick="choose(1)"></li>
+            <li id="option-3" onclick="choose(2)"></li>
+            <li id="option-4" onclick="choose(3)"></li>
+          </ul>
+        </section>
+      </section>
+      <div id="controls">
+        <button onclick="prev()">Previous</button
+        ><button onclick="next()">Next</button>
+      </div>
+      <aside>
+        <section id="quick-nav">
+          <span onclick="jump('story')">story</span>
+          <span onclick="jump(0)">1</span>
+          <span onclick="jump(1)">2</span>
+          <span onclick="jump(2)">3</span>
+          <span onclick="jump(3)">4</span>
+          <span onclick="jump(4)">5</span>
+          <span onclick="jump(5)">6</span>
+          <span onclick="jump(6)">7</span>
+          <span onclick="jump(7)">8</span>
+          <span onclick="jump(8)">9</span>
+          <span onclick="jump(9)">10</span>
+        </section>
+      </aside>
+    </main>
+
+    <div id="result">
+      <h1 id="resultMessage"></h1>
+
+      <p><a href="/">Back to home</a></p>
+    </div>
+    <script>
+      const data = <%- JSON.stringify(data) -%>
+    </script>
+    <script src="/static/scripts/question.js"></script>
+  </body>
+</html>
